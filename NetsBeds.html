@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nets Beds</title>
+<link rel="icon" type="image/png" href="Logo.png">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg,#2c3e50,#1f2a36);
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* NAV */
+
+nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    padding: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* HERO */
+
+.hero {
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    
+    /* Background setup */
+    background: 
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("logo.png") center/contain no-repeat;
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+}
+
+/* PRODUCT CARDS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.price {
+    color: #1e8449;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* PRICE TABLE — REVAMPED */
+
+.price-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    background: white;
+}
+
+.price-table thead {
+    background: #2c3e50;
+    color: white;
+}
+
+.price-table th,
+.price-table td {
+    padding: 14px 12px;
+}
+
+.price-table tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.price-table tbody tr:hover {
+    background: #f7fafc;
+}
+
+.price-table td:first-child {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* FORM */
+
+form {
+    max-width: 420px;
+    margin: auto;
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+form input, form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1a252f;
+}
+
+/* MAP */
+
+.map {
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+
+footer {
+    background: #1f2a36;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+/* FLOAT WHATSAPP */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.site-header {
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo-area img {
+    height: 70px;
+    width: auto;
+    border-radius: 8px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="logo-area">
+        <img src="logo.png" alt="Nets Beds Logo">
+        <div>
+        <h1>Nets Beds</h1>
+        <p>Quality Sleep • Best Prices</p>
+        </div>
+        </div>
+        
+        </header>        
+
+<nav>
+<a href="#products">Sizes</a>
+<a href="#prices">Prices</a>
+<a href="#order">Order</a>
+<a href="#location">Location</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+Comfort Starts With The Right Bed
+</section>
+
+<!-- BED SIZE TEMPLATES -->
+
+<section class="section" id="products">
+<h2>Available Bed Sizes</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="Single.jpeg">
+<h3>Single</h3>
+<p>910 × 1880 mm</p>
+<p class="price">From R2650</p>
+</div>
+
+<div class="card">
+<img src="3QBed.jpeg">
+<h3>3/4</h3>
+<p>1070 × 1880 mm</p>
+<p class="price">From R2750</p>
+</div>
+
+<div class="card">
+<img src="Double.jpeg">
+<h3>Double</h3>
+<p>1370 × 1880 mm</p>
+<p class="price">From R3050</p>
+</div>
+
+<div class="card">
+<img src="QueenBed.jpeg">
+<h3>Queen</h3>
+<p>1520 × 1880 mm</p>
+<p class="price">From R3200</p>
+</div>
+
+<div class="card">
+<img src="KingBed.jpeg">
+<h3>King</h3>
+<p>1830 × 1880 mm</p>
+<p class="price">From R4150</p>
+</div>
+
+</div>
+</section>
+
+<!-- PRICE TABLE -->
+
+<section class="section" id="prices">
+<h2>Price List</h2>
+
+<table class="price-table">
+<thead>
+<tr>
+<th>Type</th><th>Single</th><th>3/4</th><th>Double</th><th>Queen</th><th>King</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Turn Free</td><td>2650</td><td>2750</td><td>3050</td><td>3200</td><td>4150</td></tr>
+<tr><td>Turnable</td><td>2750</td><td>2900</td><td>3250</td><td>3450</td><td>4400</td></tr>
+<tr><td>Pillow Top</td><td>2900</td><td>3000</td><td>3350</td><td>3500</td><td>4500</td></tr>
+<tr><td>Full Foam</td><td>3600</td><td>3950</td><td>4550</td><td>4650</td><td>5950</td></tr>
+<tr><td>Full Foam +</td><td>4250</td><td>4650</td><td>5550</td><td>5750</td><td>7650</td></tr>
+<tr><td>Pocket Coil</td><td>3700</td><td>3950</td><td>4550</td><td>4650</td><td>5950</td></tr>
+<tr><td>Pocket Coil +</td><td>4350</td><td>4650</td><td>5550</td><td>5750</td><td>7650</td></tr>
+<tr><td>Base Only</td><td>810</td><td>820</td><td>845</td><td>870</td><td>1320</td></tr>
+</tbody>
+</table>
+
+<p>Choose brand/type from this table when ordering.</p>
+</section>
+
+<!-- ORDER FORM -->
+
+<section class="section" id="order">
+<h2>WhatsApp Order Request</h2>
+
+<form id="orderForm">
+<input id="custName" placeholder="Customer Name" required>
+<input id="custPhone" placeholder="Contact Number" required>
+
+<select id="bedSize" required>
+<option value="">Bed Size</option>
+<option>Single</option>
+<option>3/4</option>
+<option>Double</option>
+<option>Queen</option>
+<option>King</option>
+</select>
+
+<select id="bedType" required>
+<option value="">Bed Type</option>
+<option>Turn Free</option>
+<option>Turnable</option>
+<option>Pillow Top</option>
+<option>Full Foam</option>
+<option>Full Foam +</option>
+<option>Pocket Coil</option>
+<option>Pocket Coil +</option>
+<option>Base Only</option>
+</select>
+
+<input id="qty" type="number" value="1" min="1" placeholder="Quantity">
+
+<button type="submit">Send Order via WhatsApp</button>
+</form>
+</section>
+
+<!-- GOOGLE MAP -->
+
+<section class="section" id="location">
+<h2>Our Location</h2>
+
+<div class="map">
+<iframe
+width="100%"
+height="350"
+frameborder="0"
+style="border:0"
+src="https://www.google.com/maps?q=101%20Dalmatian%20Close,%20Austin%20View,%20Midrand&output=embed"
+allowfullscreen>
+</iframe>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+<h2>Contact</h2>
+<p>Email: <a href="netssupply45@gmail.com">netssupply45@gmail.com</a>
+    </p>
+<p>WhatsApp: +27 82 660 2020</p>
+<p>Address: 101 Dalmatian Close, Austin View, Midrand</p>
+</section>
+
+<footer>
+© 2026 Nets Beds — All Rights Reserved
+</footer>
+
+<a href="https://wa.me/27826602020" class="whatsapp-float" target="_blank">
+WhatsApp Us
+</a>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+e.preventDefault();
+const msg = `Hello Nets Beds,
+Order Request:
+Name: ${custName.value}
+Phone: ${custPhone.value}
+Size: ${bedSize.value}
+Type: ${bedType.value}
+Qty: ${qty.value}`;
+window.open("https://wa.me/27826602020?text="+encodeURIComponent(msg));
+});
+</script>
+
+</body>
+</html>
